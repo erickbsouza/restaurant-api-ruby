@@ -15,6 +15,9 @@
     rails db:create rails db:migrate will create all the database and migrate will create our tables
     
 * Database initialization
+    If you want to initialize the database with some date
+    You can run rails db:seed
+    I prepared some seeds with some of our typical brazilian food hehe
 
 * How to run the test suite
     To  run the tests suites you need to first run  RAILS_ENV=test rails db:create so rails will create our test database
