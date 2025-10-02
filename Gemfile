@@ -50,3 +50,5 @@ gem "rspec-rails", "~> 8.0", groups: [:development, :test]
 
 gem "factory_bot_rails"
 gem "faker"
+
+gem "pg", "~> 1.1"
