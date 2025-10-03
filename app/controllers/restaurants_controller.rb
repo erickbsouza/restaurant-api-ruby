@@ -4,7 +4,11 @@ class RestaurantsController < ApplicationController
   end
 
   def show
-    restaurant = Restaurant.find(params[:id])
-    render json: restaurant.as_json(include: { menus: { include: :menu_items } })
+    begin
+      restaurant = Restaurant.find(params[:id])
+      render json: restaurant.as_json(include: { menus: { include: :menu_items } })
+    rescue ActiveRecord::RecordNotFound
+      render json: { error: 'Restaurant not found' }, status: :not_found
+    end
   end
 end
