@@ -3,8 +3,8 @@ Rails.application.routes.draw do
   get "up" => "rails/health#show", as: :rails_health_check
 
   resources :restaurants do
-    resources :menus do
-      resources :menu_items, only: [:index, :show]
+    resources :menus, shallow: true do
+      resources :menu_items, shallow: true, only: [:index, :show]
     end
   end
 

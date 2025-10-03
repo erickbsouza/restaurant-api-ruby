@@ -16,7 +16,7 @@ RSpec.describe MenuItemsController, type: :controller do
     describe "GET #show" do
         context "when menu item exists" do
             it "returns the menu item" do
-                get :show, params: { menu_id: menu.id, id: menu_item.id }
+                get :show, params: { id: menu_item.id }
                 expect(response).to have_http_status(:ok)
                 expect(JSON.parse(response.body)["name"]).to eq("Baião")
             end
@@ -24,7 +24,7 @@ RSpec.describe MenuItemsController, type: :controller do
 
         context "when menu item does not exist" do
             it "returns not found" do
-                get :show, params: { menu_id: menu.id, id: 9999 }
+                get :show, params: { id: 9999 }
                 expect(response).to have_http_status(:not_found)
                 expect(JSON.parse(response.body)["error"]).to eq("MenuItem not found")
             end

@@ -7,12 +7,12 @@ RSpec.describe MenusController, type: :controller do
 
   describe "GET #index" do
     it "returns a successful response" do
-      get :index
+      get :index, params: { restaurant_id: restaurant.id }
       expect(response).to have_http_status(:ok)
     end
 
     it "returns all menus with their menu items" do
-      get :index
+      get :index, params: { restaurant_id: restaurant.id }
       json = JSON.parse(response.body)
       expect(json.first["name"]).to eq("Brazilian Dishes")
       expect(json.first["menu_items"].first["name"]).to eq("Baião")
