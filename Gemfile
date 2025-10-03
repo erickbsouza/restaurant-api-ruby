@@ -54,3 +54,7 @@ gem "factory_bot_rails"
 gem "faker"
 
 gem "pg", "~> 1.1"
+
+group :test do
+  gem 'simplecov', require: false
+end

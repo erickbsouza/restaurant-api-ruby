@@ -1,4 +1,3 @@
-# app/services/restaurant_data_importer.rb
 class RestaurantDataImporter
   attr_reader :logs, :success
 

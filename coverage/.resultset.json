@@ -1,0 +1,279 @@
+{
+  "RSpec": {
+    "coverage": {
+      "/home/pge/estudo/restaurant-api-ruby/restaurant-api/app/models/menu_item.rb": {
+        "lines": [
+          1,
+          1,
+          1,
+          1,
+          null
+        ]
+      },
+      "/home/pge/estudo/restaurant-api-ruby/restaurant-api/app/models/application_record.rb": {
+        "lines": [
+          1,
+          1,
+          null
+        ]
+      },
+      "/home/pge/estudo/restaurant-api-ruby/restaurant-api/app/models/menu.rb": {
+        "lines": [
+          1,
+          1,
+          1,
+          1,
+          null
+        ]
+      },
+      "/home/pge/estudo/restaurant-api-ruby/restaurant-api/app/models/restaurant.rb": {
+        "lines": [
+          1,
+          1,
+          1,
+          null
+        ]
+      },
+      "/home/pge/estudo/restaurant-api-ruby/restaurant-api/app/controllers/menu_items_controller.rb": {
+        "lines": [
+          1,
+          1,
+          1,
+          null,
+          null,
+          1,
+          1,
+          null,
+          null,
+          null,
+          1,
+          2,
+          1,
+          null,
+          1,
+          null,
+          null,
+          null,
+          1,
+          null,
+          1,
+          1,
+          null,
+          0,
+          null,
+          null,
+          1,
+          2,
+          null,
+          null
+        ]
+      },
+      "/home/pge/estudo/restaurant-api-ruby/restaurant-api/app/controllers/application_controller.rb": {
+        "lines": [
+          1,
+          1,
+          1,
+          null,
+          1,
+          0,
+          null,
+          null,
+          1,
+          0,
+          null,
+          null
+        ]
+      },
+      "/home/pge/estudo/restaurant-api-ruby/restaurant-api/app/controllers/menus_controller.rb": {
+        "lines": [
+          1,
+          1,
+          2,
+          2,
+          null,
+          0,
+          null,
+          null,
+          1,
+          3,
+          2,
+          null,
+          1,
+          null,
+          null,
+          null
+        ]
+      },
+      "/home/pge/estudo/restaurant-api-ruby/restaurant-api/app/services/restaurant_data_importer.rb": {
+        "lines": [
+          1,
+          1,
+          null,
+          1,
+          5,
+          5,
+          5,
+          5,
+          null,
+          null,
+          1,
+          5,
+          null,
+          4,
+          4,
+          0,
+          0,
+          0,
+          null,
+          null,
+          4,
+          1,
+          1,
+          null,
+          3,
+          3,
+          null,
+          1,
+          1,
+          1,
+          null,
+          null,
+          1,
+          null,
+          1,
+          2,
+          null,
+          null,
+          1,
+          4,
+          4,
+          null,
+          null,
+          1,
+          4,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          1,
+          5,
+          5,
+          null,
+          null,
+          1,
+          3,
+          3,
+          3,
+          2,
+          2,
+          null,
+          1,
+          1,
+          null,
+          null,
+          null,
+          null,
+          1,
+          2,
+          2,
+          2,
+          2,
+          2,
+          2,
+          null,
+          0,
+          0,
+          null,
+          null,
+          null,
+          null,
+          1,
+          2,
+          3,
+          null,
+          3,
+          2,
+          null,
+          3,
+          null,
+          3,
+          3,
+          3,
+          null,
+          0,
+          0,
+          null,
+          null,
+          null,
+          null
+        ]
+      },
+      "/home/pge/estudo/restaurant-api-ruby/restaurant-api/app/controllers/restaurants_controller.rb": {
+        "lines": [
+          1,
+          1,
+          1,
+          null,
+          null,
+          1,
+          null,
+          2,
+          1,
+          null,
+          1,
+          null,
+          null,
+          null
+        ]
+      },
+      "/home/pge/estudo/restaurant-api-ruby/restaurant-api/app/controllers/imports_controller.rb": {
+        "lines": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          null,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "branches": {}
+      },
+      "/home/pge/estudo/restaurant-api-ruby/restaurant-api/app/jobs/application_job.rb": {
+        "lines": [
+          0,
+          null,
+          null,
+          null,
+          null,
+          null,
+          0
+        ],
+        "branches": {}
+      },
+      "/home/pge/estudo/restaurant-api-ruby/restaurant-api/app/mailers/application_mailer.rb": {
+        "lines": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "branches": {}
+      }
+    },
+    "timestamp": 1759512890
+  }
+}
