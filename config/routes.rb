@@ -10,4 +10,6 @@ Rails.application.routes.draw do
 
   post "/imports", to: "imports#create"
 
+  match '*unmatched', to: 'application#route_not_found', via: :all
+  
 end
