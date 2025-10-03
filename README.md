@@ -17,9 +17,8 @@ Start the Docker environment:
 docker compose up
 # or
 docker-compose up
-
-This will start the PostgreSQL database and create the default schema restaurant_api using init.sql.
 ```
+This will start the PostgreSQL database and create the default schema restaurant_api using init.sql.
 
 ## Database setup
 
@@ -52,6 +51,9 @@ rspec
 1. Using the Rake task
 ```bash
 bundle exec rake import:restaurants FILE=path/to/restaurant_data.json
+# or
+bundle exec rake import:restaurants 
+# Since the restaurant_data.json is already at the root of the project
 ```
 
 2. Using the HTTP POST endpoint
