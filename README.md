@@ -2,6 +2,10 @@
 
 # Restaurant API
 
+### Levels
+In this project we have git tags with level-1, level-2 and level-3 code
+that was when i finished each level so you can understand how i developed each part
+
 ## Ruby version
 - 3.3.0
 
