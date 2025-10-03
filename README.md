@@ -10,6 +10,7 @@
 - Docker and Docker Compose for database setup
 
 ## Configuration
+
 Start the Docker environment:
 
 ```bash
@@ -21,7 +22,8 @@ This will start the PostgreSQL database and create the default schema restaurant
 ```
 
 ## Database setup
-    Create and migrate the database:
+
+Create and migrate the database:
 
 ```bash
 rails db:create
@@ -47,14 +49,14 @@ rspec
 ```
 ## Importing restaurant data
 
-    1. Using the Rake task
+1. Using the Rake task
 ```bash
 bundle exec rake import:restaurants FILE=path/to/restaurant_data.json
 ```
 
 2. Using the HTTP POST endpoint
 ```bash
-curl --location 'http://localhost:3000/import_restaurants' \
+curl --location 'http://localhost:3000/imports' \
 --header 'Content-Type: application/json' \
 --data '{
     "restaurants": [
