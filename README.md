@@ -29,7 +29,8 @@ rails db:migrate
 ```
     
 ## Database initialization
-    I prepared some seeds with some of our typical brazilian food hehe
+
+I prepared some seeds with some of our typical brazilian food hehe
 
 ```bash
 rails db:seed
