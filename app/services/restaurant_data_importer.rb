@@ -33,6 +33,10 @@ class RestaurantDataImporter
 
   private
 
+  def normalize_items(menu_data)
+    menu_data["menu_items"] || menu_data["dishes"] || []
+  end 
+
   def handle_invalid_json(data)
     return true if data.nil? || !data.is_a?(Hash)
     false
@@ -69,7 +73,8 @@ class RestaurantDataImporter
       menu = restaurant.menus.find_or_initialize_by(name: menu_data["name"])
       if menu.save
         logs << "  Imported menu: #{menu.name}"
-        import_menu_items(menu, menu_data["items"])
+        items_data = normalize_items(menu_data)
+        import_menu_items(menu, items_data)
       else
         logs << "  Failed menu: #{menu_data["name"]} - #{menu.errors.full_messages.join(", ")}"
         @success = false
@@ -79,18 +84,20 @@ class RestaurantDataImporter
 
   def import_menu_items(menu, items_data)
     items_data.each do |item_data|
-      item = menu.menu_items.find_or_initialize_by(name: item_data["name"])
-      if MenuItem.exists?(name: item_data["name"]) && item.new_record?
-        logs << "    Skipped existing item: #{item.name}"
-        next
-      end
-      item.assign_attributes(price: item_data["price"])
+      item = MenuItem.find_or_initialize_by(name: item_data["name"])
+
+    if item.price != item_data["price"]
+      logs << "    Updated price for item '#{item.name}' from #{item.price} to #{item_data["price"]}"
+    end
+    item.assign_attributes(price: item_data["price"])
+
       if item.save
-        logs << "    Imported item: #{item.name}"
+        menu.menu_items << item unless menu.menu_items.exists?(item.id)
+        logs << "Imported item: #{item.name}"
       else
-        logs << "    Failed item: #{item_data["name"]} - #{item.errors.full_messages.join(", ")}"
+        logs << "Failed item: #{item_data["name"]} - #{item.errors.full_messages.join(", ")}"
         @success = false
-      end
+       end
     end
   end
 end

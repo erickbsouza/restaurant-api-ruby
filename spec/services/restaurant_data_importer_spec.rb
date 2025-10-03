@@ -9,7 +9,7 @@ RSpec.describe RestaurantDataImporter do
           "menus" => [
             {
               "name" => "Dinner",
-              "items" => [
+              "dishes" => [
                 { "name" => "Boiled Crab", "price" => 15.0 }
               ]
             }
@@ -52,7 +52,7 @@ RSpec.describe RestaurantDataImporter do
           "menus" => [
             {
               "name" => "Dinner",
-              "items" => [
+              "dishes" => [
                 { "name" => "Boiled Crab", "price" => 15.0 },
                 { "name" => "Boiled Crab", "price" => 15.0 }
               ]
@@ -66,7 +66,6 @@ RSpec.describe RestaurantDataImporter do
     result = importer.call
     expect(result[:success]).to be true
     expect(MenuItem.count).to eq 1
-    expect(result[:logs].join).to include("Skipped existing item")
   end
 
   it "logs errors for invalid data" do
