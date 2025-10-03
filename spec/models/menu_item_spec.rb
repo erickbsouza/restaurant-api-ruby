@@ -39,5 +39,16 @@ RSpec.describe MenuItem, type: :model do
 
     expect(item.menus.count).to eq(2)
   end
+
+  it "is invalid with a name shorter than 2 characters" do
+    item = MenuItem.new(name: "A", price: 10.0)
+    expect(item).not_to be_valid
+  end
+
+  it "is invalid with a name longer than 100 characters" do
+    long_name = "A" * 101
+    item = MenuItem.new(name: long_name, price: 10.0)
+    expect(item).not_to be_valid
+  end
 end
 

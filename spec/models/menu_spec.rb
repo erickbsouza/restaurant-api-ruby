@@ -28,4 +28,17 @@ RSpec.describe Menu, type: :model do
     item2 = menu.menu_items.create(name: "Tapioca", price: 7.0)
     expect(menu.menu_items).to include(item1, item2)
   end
+
+  it "is invalid with a name shorter than 3 characters" do
+    restaurant = Restaurant.create(name:"Ordones")
+    menu = Menu.new(name: "AB", restaurant: restaurant)
+    expect(menu).not_to be_valid
+  end
+
+  it "is invalid with a name longer than 50 characters" do
+    restaurant = Restaurant.create(name:"Ordones")
+    long_name = "A" * 51
+    menu = Menu.new(name: long_name, restaurant: restaurant)
+    expect(menu).not_to be_valid
+  end
 end

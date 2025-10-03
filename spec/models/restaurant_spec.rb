@@ -32,4 +32,15 @@ RSpec.describe Restaurant, type: :model do
     expect { restaurant.destroy }.to change { Menu.count }.by(-1)
     expect(MenuItem.exists?(menu_item.id)).to be true
   end
+
+  it "is invalid with a name shorter than 3 characters" do
+    restaurant = Restaurant.new(name: "AB")
+    expect(restaurant).not_to be_valid
+  end
+
+  it "is invalid with a name longer than 100 characters" do
+    long_name = "A" * 101
+    restaurant = Restaurant.new(name: long_name)
+    expect(restaurant).not_to be_valid
+  end
 end
