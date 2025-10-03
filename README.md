@@ -20,6 +20,16 @@ docker-compose up
 ```
 This will start the PostgreSQL database and create the default schema restaurant_api using init.sql.
 
+Setup the project
+
+```bash
+# if you have rvm installed
+rvm install 3.3.0
+rvm use 3.3.0
+gem install bundler
+bundle install
+```
+
 ## Database setup
 
 Create and migrate the database:
@@ -35,6 +45,15 @@ I prepared some seeds with some of our typical brazilian food hehe
 
 ```bash
 rails db:seed
+```
+
+## Run the project
+
+```bash
+rails s
+# the project will run at loclahost:3000 by default
+# if you want to set a diferent port you can use, just be careful changing the default port because the code snippet to test the POST endpoint for importing is at por 3000
+rails s -p 3001
 ```
 
 ## How to run the test suite
