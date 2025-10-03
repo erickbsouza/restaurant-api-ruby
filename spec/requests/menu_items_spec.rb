@@ -1,7 +1,8 @@
 require 'rails_helper'
 
 RSpec.describe MenuItemsController, type: :controller do
-    let(:menu) { Menu.create!(name: "Brazilian Dishes") }
+    let(:restaurant) { Restaurant.create!(name: "Ordones") }
+    let(:menu) { Menu.create!(name: "Brazilian Dishes", restaurant: restaurant) }
     let!(:menu_item) { menu.menu_items.create!(name: "Baião", price: 9.0) }
 
     describe "GET #index" do
